@@ -1,0 +1,28 @@
+<h1>Tasks</h1>
+
+<table border="1">
+<thead>
+    <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Task Time</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </tr>
+</thead>
+<tbody>
+    {% for task in object_list %}
+    <tr>
+    <td>{{ task.title }}</td>
+    <td>{{ task.description }}</td>
+    <td>{{ task.task_time }}</td>
+    <td><a href="{% url "task_view" task.id %}">view</a></td>
+    <td><a href="{% url "task_edit" task.id %}">edit</a></td>
+    <td><a href="{% url "task_delete" task.id %}">delete</a></td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+<a href="{% url "task_new" %}">New</a>
