@@ -1,6 +1,6 @@
 clone the project
 
-git clone 
+git clone https://github.com/gopigowda/django_project.git
 
 Create Virtual Environment Using Below command
 
