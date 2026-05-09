@@ -16,7 +16,11 @@ class TaskView(DetailView):
 	model = Task
 
 	def get(self, *args, **kwargs):
-		raise RuntimeError("Intentional 500 — TraceIQ ingest test")
+		value = self.get_object()
+		undefined_variable
+		if value.is_deleted:
+			return HttpResponse("Task is deleted")
+		return super().get(*args, **kwargs)
 
 
 class TaskCreate(CreateView):
