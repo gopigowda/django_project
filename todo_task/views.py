@@ -17,7 +17,10 @@ class TaskView(DetailView):
 
 	def get(self, *args, **kwargs):
 		value = self.get_object()
-		undefined_variable
+		undefined_variable =2
+		for i in range(5,undefined_variable):
+			print(i)
+
 		if value.is_deleted:
 			return HttpResponse("Task is deleted")
 		return super().get(*args, **kwargs)
