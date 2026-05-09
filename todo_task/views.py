@@ -18,7 +18,7 @@ class TaskView(DetailView):
 	def get(self, *args, **kwargs):
 		value = self.get_object()
 		undefined_variable =2
-		for i in range(5,undefined_variable):
+		for i in range(5,variae):
 			print(i)
 
 		if value.is_deleted:
