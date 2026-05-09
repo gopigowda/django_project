@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -14,7 +14,7 @@ class TaskList(ListView):
 
 class TaskView(DetailView):
 	model = Task
-	
+
 
 class TaskCreate(CreateView):
 	model = Task
