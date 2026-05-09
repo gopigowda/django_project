@@ -15,6 +15,9 @@ class TaskList(ListView):
 class TaskView(DetailView):
 	model = Task
 
+	def get(self, *args, **kwargs):
+		raise RuntimeError("Intentional 500 — TraceIQ ingest test")
+
 
 class TaskCreate(CreateView):
 	model = Task
